@@ -1,0 +1,13 @@
+---
+import { profile } from '../data/portfolio';
+---
+<footer class="site-footer">
+  <div class="footer-inner">
+    <div class="footer-contacts">
+      <div><span>Email :</span><a href={`mailto:${profile.email}`}>{profile.email}</a></div>
+      <div><span>Tél :</span><a href={`tel:${profile.phoneHref}`}>{profile.phone}</a></div>
+      <a class="footer-contact" href="/contact">Discutons d’un projet <span aria-hidden="true">↗</span></a>
+    </div>
+    <p>© 2026 {profile.name}. Tous droits réservés.</p>
+  </div>
+</footer>

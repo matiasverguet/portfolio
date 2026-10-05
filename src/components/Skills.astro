@@ -1,0 +1,15 @@
+---
+import { skills } from '../data/portfolio';
+---
+<section class="skills-section section" aria-labelledby="skills-title">
+  <h2 id="skills-title">Mes compétences</h2>
+  <p class="section-intro">Je combine créativité et maîtrise technique pour développer<br class="desktop-break" /> des projets en web design, UX/UI et identité de marque.</p>
+  <div class="skills-list">
+    {skills.map((skill, i) => (
+      <details class="skill">
+        <summary><span class="skill-number">{i + 1}.</span><span>{skill.title}</span><span class="chevron" aria-hidden="true"></span></summary>
+        <p>{skill.description}</p>
+      </details>
+    ))}
+  </div>
+</section>

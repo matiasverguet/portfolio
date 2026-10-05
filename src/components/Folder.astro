@@ -1,0 +1,5 @@
+---
+interface Props { class?: string }
+const { class: className = '' } = Astro.props;
+---
+<div class={`folder ${className}`} aria-hidden="true"><div class="folder-back"></div><slot /><div class="folder-front"></div></div>

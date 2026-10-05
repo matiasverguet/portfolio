@@ -1,0 +1,11 @@
+---
+import { projects } from '../data/portfolio';
+---
+<div class="project-grid">
+  {projects.map(project => (
+    <figure class="project-card" data-category={project.category}>
+      <img src={project.image} alt={`Dossier du projet ${project.title}`} width="440" height="376" loading="lazy" />
+      <figcaption>{project.title}</figcaption>
+    </figure>
+  ))}
+</div>

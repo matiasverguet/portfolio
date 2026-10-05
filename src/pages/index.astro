@@ -1,0 +1,41 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Folder from '../components/Folder.astro';
+import Skills from '../components/Skills.astro';
+import ProjectGrid from '../components/ProjectGrid.astro';
+import { profile } from '../data/portfolio';
+---
+<Layout>
+  <section class="hero container" aria-labelledby="hero-title">
+    <Folder class="hero-folder folder-one" />
+    <Folder class="hero-folder folder-two"><div class="design-tools"><span>≋</span><span>●</span></div></Folder>
+    <div class="selection-box">
+      <span class="handle top-left" aria-hidden="true"></span><span class="handle top-right" aria-hidden="true"></span>
+      <h1 id="hero-title"><span>Matias</span>Verguet--Bailly</h1>
+      <p class="hero-role">Designer graphique</p>
+      <span class="handle bottom-left" aria-hidden="true"></span><span class="handle bottom-right" aria-hidden="true"></span>
+      <svg class="cursor" viewBox="0 0 50 65" aria-hidden="true"><path fill="currentColor" d="M3 2v49l13-12 12 24 12-6-12-24 20-2z" /></svg>
+    </div>
+    <Folder class="hero-folder folder-three" />
+    <Folder class="hero-folder folder-four" />
+    <p class="hero-status">{profile.internship}</p>
+  </section>
+  <div class="container">
+    <Skills />
+    <section class="home-about section" aria-labelledby="about-title">
+      <div class="avatar-folder"><Folder><img src="/images/avatar.webp" alt="Avatar de Matias" width="800" height="800" /></Folder></div>
+      <div class="about-copy">
+        <h2 id="about-title">À propos</h2>
+        <p>Je m’appelle Matias Verguet--Bailly, j’ai 19 ans et je suis actuellement en deuxième année de BUT Métiers du Multimédia et de l’Internet. Je souhaite me spécialiser dans le webdesign et le graphisme.</p>
+        <div class="stats"><div><strong>2ème</strong><span>Année MMI</span></div><div><strong>10+</strong><span>Projets</span></div></div>
+        <div class="about-contacts"><div><b>Tél :</b><a href={`tel:${profile.phoneHref}`}>{profile.phone}</a></div><div><b>Email :</b><a href={`mailto:${profile.email}`}>{profile.email}</a></div></div>
+        <a class="button" href="/about">Me découvrir <span aria-hidden="true">→</span></a>
+      </div>
+    </section>
+    <section class="home-projects section" aria-labelledby="projects-title">
+      <h2 id="projects-title">Mes projets</h2>
+      <ProjectGrid />
+      <div class="section-action"><a class="button" href="/projets">Plus de projets <span aria-hidden="true">→</span></a></div>
+    </section>
+  </div>
+</Layout>

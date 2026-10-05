@@ -1,0 +1,26 @@
+---
+import Layout from '../layouts/Layout.astro';
+import ProjectGrid from '../components/ProjectGrid.astro';
+---
+<Layout title="Mes projets — Matias Verguet--Bailly">
+  <section class="container projects-page page-section">
+    <h1 class="page-title">Mes projets</h1>
+    <div class="projects-intro"><p>Entre stratégie et création : je conçois des solutions visuelles pour répondre à des besoins réels avec un design percutant.</p>
+      <div class="filter-control"><label for="project-filter">Filtrer</label><select id="project-filter"><option value="all">Tous les projets</option><option>Web design</option><option>Graphisme</option><option>Identité de marque</option></select></div>
+    </div>
+    <ProjectGrid />
+    <p class="filter-status sr-only" aria-live="polite"></p>
+  </section>
+</Layout>
+<script>
+  const filter = document.querySelector<HTMLSelectElement>('#project-filter');
+  filter?.addEventListener('change', () => {
+    let count = 0;
+    document.querySelectorAll<HTMLElement>('.project-card').forEach(card => {
+      card.hidden = filter.value !== 'all' && card.dataset.category !== filter.value;
+      if (!card.hidden) count++;
+    });
+    const status = document.querySelector('.filter-status');
+    if (status) status.textContent = `${count} projet${count > 1 ? 's' : ''} affiché${count > 1 ? 's' : ''}`;
+  });
+</script>

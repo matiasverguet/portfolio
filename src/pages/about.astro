@@ -1,0 +1,21 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Skills from '../components/Skills.astro';
+const education = [ ['BUT MMI', 'IUT de Montbéliard', '2025–2028'], ['BUT GMP', 'IUT de Besançon', '2024–2025'], ['Bac général', 'Lycée Follereau, Belfort', '2021–2024'] ];
+const process = [
+  ['Recherche et stratégie', 'Comprendre le projet, les utilisateurs et les objectifs. Analyser les références et définir une direction visuelle cohérente.'],
+  ['Concept & idéation', 'Explorer les pistes créatives et les traduire en compositions, palettes, typographies et premières maquettes.'],
+  ['Tests', 'Évaluer la lisibilité, les usages et les interactions. Affiner le design à partir des retours pour une expérience intuitive.'],
+  ['Déploiement & livrables', 'Finaliser le projet et préparer les fichiers adaptés à chaque support : exports pour le print, assets et intégration web.'],
+];
+---
+<Layout title="À propos — Matias Verguet--Bailly">
+  <div class="container about-page page-section">
+    <h1 class="page-title">À propos</h1>
+    <section class="bio"><div><h2>Matias Verguet--Bailly</h2><p>J’ai 19 ans et je suis actuellement en deuxième année de BUT Métiers du Multimédia et de l’Internet (MMI). Passionné par la communication visuelle et le numérique, je me spécialise en design graphique et en conception UI/UX, avec pour ambition de construire une carrière créative mêlant esthétique et stratégie de marque.</p><p>À travers mes projets, j’ai développé des compétences en identité visuelle, design d’interfaces et intégration web. J’aime imaginer des univers graphiques marquants et concevoir des expériences fluides, fonctionnelles et engageantes.</p></div><img class="bio-avatar" src="/images/avatar.webp" alt="Avatar de Matias" width="800" height="800" /></section>
+    <Skills />
+    <section class="education section"><h2>Parcours scolaire</h2><div class="education-list">{education.map(([degree, school, years]) => <div class="education-row"><h3>{degree}</h3><p><span>{school}</span><br />{years}</p></div>)}</div></section>
+    <section class="tools section" aria-labelledby="tools-title"><div class="tools-card"><h2 id="tools-title">Outils</h2><ul>{['Figma', 'Affinity', 'Canva', 'DaVinci Resolve', 'WordPress', 'HTML / CSS', 'Astro', 'SQL'].map(tool => <li>{tool}</li>)}</ul><div class="tool-colors" aria-hidden="true">{['#ff4961','#ff9415','#ffc400','#00c74d','#163cff','#888','#ddd'].map(color => <span style={`background:${color}`}></span>)}</div></div></section>
+    <section class="process section"><h2>Concevoir avec créativité</h2><div class="process-grid">{process.map(([title, description], i) => <article class={`process-card step-${i + 1}`}><span class="step-number">0{i + 1}.</span><h3>{title}</h3><p>{description}</p></article>)}</div></section>
+  </div>
+</Layout>

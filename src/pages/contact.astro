@@ -1,0 +1,41 @@
+---
+import Layout from '../layouts/Layout.astro';
+import { profile } from '../data/portfolio';
+---
+<Layout title="Contact — Matias Verguet--Bailly">
+  <section class="container contact-page page-section">
+    <h1 class="page-title">Discutons d’un projet</h1>
+    <div class="contact-grid">
+      <section class="contact-card"><h2>Coordonnées</h2><dl>
+        <div><dt>Stage</dt><dd><span class="status-badge">29/03 au 04/06 2026</span></dd></div>
+        <div><dt>Email</dt><dd><a href={`mailto:${profile.email}`}>{profile.email}</a></dd></div>
+        <div><dt>Tél</dt><dd><a href={`tel:${profile.phoneHref}`}>{profile.phone}</a></dd></div>
+        <div><dt>Localisation</dt><dd>{profile.location}</dd></div>
+      </dl><p class="contact-note">Une idée, une collaboration ? Écris-moi pour en discuter.</p></section>
+      <section class="contact-card"><h2>Contactez-moi</h2>
+        <form id="contact-form">
+          <label for="name">Votre nom</label><input id="name" name="name" autocomplete="name" required maxlength="120" />
+          <label for="email">Votre email</label><input id="email" name="email" type="email" autocomplete="email" required maxlength="254" />
+          <fieldset class="subjects"><legend class="sr-only">Sujet du message</legend>{['Stage / Alternance', 'Identité visuelle', 'Autre'].map((topic,i) => <label><input type="radio" name="topic" value={topic} checked={i === 0} /><span>{topic}</span></label>)}</fieldset>
+          <label for="message">Votre message</label><textarea id="message" name="message" rows="4" required maxlength="5000"></textarea>
+          <button class="button" type="submit">Préparer le message <span aria-hidden="true">→</span></button>
+          <p class="form-note">Ce formulaire ouvre ta messagerie. Aucun message n’est envoyé depuis le site.</p>
+          <p id="form-status" role="status"></p>
+        </form>
+      </section>
+    </div>
+  </section>
+</Layout>
+<script>
+  const form = document.querySelector<HTMLFormElement>('#contact-form');
+  form?.addEventListener('submit', event => {
+    event.preventDefault();
+    if (!form.reportValidity()) return;
+    const data = new FormData(form);
+    const subject = `Portfolio — ${data.get('topic')}`;
+    const body = `Bonjour Matias,\n\n${data.get('message')}\n\n${data.get('name')}\n${data.get('email')}`;
+    window.location.href = `mailto:matiasverguet@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+    const status = document.querySelector('#form-status');
+    if (status) status.textContent = 'Message préparé pour ta messagerie. Tu peux aussi utiliser le lien email dans les coordonnées.';
+  });
+</script>
