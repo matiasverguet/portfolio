@@ -1,8 +1,11 @@
 ---
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
-import '@fontsource/oswald/400.css';
-import '@fontsource/oswald/500.css';
+import '@fontsource/inter/300.css';
+import '@fontsource/inter/400.css';
+import '@fontsource/inter/900.css';
+import '@fontsource/anton/400.css';
+import '@fontsource/instrument-serif/400.css';
 import '../styles/global.css';
 interface Props { title?: string; description?: string }
 const { title = 'Matias Verguet--Bailly — Designer graphique', description = 'Portfolio de Matias Verguet--Bailly : web design, UI/UX, graphisme et identité de marque.' } = Astro.props;
@@ -17,8 +20,8 @@ const { title = 'Matias Verguet--Bailly — Designer graphique', description = '
     <link rel="icon" type="image/svg+xml" href="/images/logo.svg" />
     <title>{title}</title>
   </head>
-  <body>
-    <a class="skip-link" href="#main">Aller au contenu</a>
+  <body class="m-0 bg-[#e3e3e3] bg-[linear-gradient(#00000010_1px,transparent_1px),linear-gradient(90deg,#00000010_1px,transparent_1px)] bg-[size:54px_54px] font-sans text-[#080808] [&_a]:no-underline [&_img]:block [&_button]:font-[inherit] [&_input]:font-[inherit] [&_select]:font-[inherit] [&_textarea]:font-[inherit] [&_:focus-visible]:outline-3 [&_:focus-visible]:outline-electric [&_:focus-visible]:outline-offset-5">
+    <a class="absolute -top-24 z-20 bg-white p-4 text-electric focus:top-2.5" href="#main">Aller au contenu</a>
     <Header />
     <main id="main"><slot /></main>
     <Footer />

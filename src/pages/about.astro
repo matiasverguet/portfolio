@@ -8,14 +8,121 @@ const process = [
   ['Tests', 'Évaluer la lisibilité, les usages et les interactions. Affiner le design à partir des retours pour une expérience intuitive.'],
   ['Déploiement & livrables', 'Finaliser le projet et préparer les fichiers adaptés à chaque support : exports pour le print, assets et intégration web.'],
 ];
+const tools = [
+  {
+    name: 'Figma',
+    category: 'Design d’interface & expérience',
+    description: 'Conception d’interfaces web et mobiles soignées, maquettage et création de prototypes interactifs prêts au développement.',
+    products: ['Design systems évolutifs (tokens, variables, composants auto-layout).', 'Prototypes interactifs micro et macro (Smart Animate, transitions).', 'Handoff développeur clair avec nomenclatures organisées.'],
+    fields: ['UI/UX', 'Wireframing', 'Responsive', 'Design System', 'User Flow'],
+    level: 'Avancé / Quotidien',
+  },
+  {
+    name: 'Affinity',
+    category: 'Création vectorielle & assets',
+    description: 'Création d’illustrations vectorielles précises, conception d’icônes sur-mesure et retouche photographique.',
+    products: ['Dessin vectoriel précis avec courbes de Bézier optimisées.', 'Préparation et export d’assets SVG légers pour le web.', 'Retouche photo, composition et détourages complexes.'],
+    fields: ['SVG', 'Vecteur', 'Iconographie', 'Retouche Photo', 'Branding'],
+    level: 'Régulier',
+  },
+  {
+    name: 'Canva',
+    category: 'Communication visuelle & social',
+    description: 'Génération rapide de déclinaisons de bannières marketing, supports pour réseaux sociaux et présentations visuelles express.',
+    products: ['Déclinaisons multiformats en un temps record.', 'Conception de bannières pour LinkedIn, X et campagnes promo.', 'Mise en page de pitch decks et documents de présentation.'],
+    fields: ['Pitch Deck', 'Bannières', 'Social Media', 'Marketing', 'Gabarits'],
+    level: 'Autonome',
+  },
+  {
+    name: 'DaVinci Resolve',
+    category: 'Montage vidéo & motion',
+    description: 'Montage dynamique de démos de projets, étalonnage colorimétrique soigné et sound design pour mettre en valeur les interfaces.',
+    products: ['Montage vidéo rythmé de présentations et cas d’études.', 'Étalonnage colorimétrique professionnel (Color Page).', 'Export haute qualité optimisé pour l’intégration web et réseaux.'],
+    fields: ['Montage', 'Étalonnage', 'Showreel', 'Case Studies', 'Sound Design'],
+    level: 'Bonne maîtrise',
+  },
+  {
+    name: 'WordPress',
+    category: 'CMS & gestion de contenu',
+    description: 'Mise en place de sites vitrines et éditoriaux administrables en toute autonomie par les clients finaux.',
+    products: ['Intégration de maquettes sur-mesure avec ACF (Advanced Custom Fields).', 'Configuration SEO, sécurité et performance de mise en cache.', 'Interface d’administration simplifiée pour l’utilisateur final.'],
+    fields: ['CMS', 'SEO', 'Maintenance', 'Blogging', 'Gutenberg'],
+    level: 'Maîtrise complète',
+  },
+  {
+    name: 'HTML / CSS',
+    category: 'Intégration front-end fondamentale',
+    description: 'Écriture d’un balisage sémantique rigoureux, responsive fluide et animations CSS modernes respectant fidèlement le design.',
+    products: ['Respect des normes d’accessibilité et de sémantique.', 'Maîtrise approfondie de Flexbox, CSS Grid et animations CSS.', 'Compatibilité multi-navigateurs et fluidité responsive.'],
+    fields: ['CSS Grid', 'Flexbox', 'Sémantique', 'Accessibilité', 'Animations'],
+    level: 'Maîtrise complète',
+  },
+  {
+    name: 'Astro',
+    category: 'Framework moderne & performance',
+    description: 'Développement de portfolios et sites vitrines ultra-rapides, livrant du HTML pur avec zéro JavaScript superflu par défaut.',
+    products: ['Architecture en îlots (Astro Islands) pour des Lighthouse 100/100.', 'Intégration transparente de Tailwind CSS et Markdown / MDX.', 'Temps de chargement instantanés et référencement naturel optimal.'],
+    fields: ['Tailwind', 'Zero-JS', 'Performance'],
+    level: 'Stack de prédilection',
+  },
+  {
+    name: 'SQL',
+    category: 'Base de données & structure',
+    description: 'Modélisation de bases relationnelles, écriture de requêtes optimisées et manipulation intègre de volumes de données.',
+    products: ['Conception de schémas relationnels clairs et normalisés.', 'Requêtes complexes (jointures, agrégations, sous-requêtes).', 'Gestion des index et optimisation des temps d’exécution.'],
+    fields: ['MySQL', 'Relations', 'Requêtes', 'Architecture'],
+    level: 'Opérationnel',
+  },
+];
 ---
 <Layout title="À propos — Matias Verguet--Bailly">
-  <div class="container about-page page-section">
-    <h1 class="page-title">À propos</h1>
-    <section class="bio"><div><h2>Matias Verguet--Bailly</h2><p>J’ai 19 ans et je suis actuellement en deuxième année de BUT Métiers du Multimédia et de l’Internet (MMI). Passionné par la communication visuelle et le numérique, je me spécialise en design graphique et en conception UI/UX, avec pour ambition de construire une carrière créative mêlant esthétique et stratégie de marque.</p><p>À travers mes projets, j’ai développé des compétences en identité visuelle, design d’interfaces et intégration web. J’aime imaginer des univers graphiques marquants et concevoir des expériences fluides, fonctionnelles et engageantes.</p></div><img class="bio-avatar" src="/images/avatar.webp" alt="Avatar de Matias" width="800" height="800" /></section>
+  <div class="mx-auto w-[84%] max-w-[1220px] pb-[150px] pt-[65px] max-[640px]:w-[88%] max-[640px]:pb-[85px] max-[640px]:pt-10">
+    <h1 class="font-display text-[clamp(56px,10vw,150px)] font-normal uppercase leading-[1.12] tracking-[-.02em]">À propos</h1>
+    <section class="mt-[10px] grid grid-cols-[1fr_.8fr] items-start gap-[20%] max-[640px]:grid-cols-1"><div><h2 class="font-display text-[27px] font-medium uppercase">Matias Verguet--Bailly</h2><p class="mt-4 text-lg leading-[1.35]">J’ai 19 ans et je suis actuellement en deuxième année de BUT Métiers du Multimédia et de l’Internet (MMI). Passionné par la communication visuelle et le numérique, je me spécialise en design graphique et en conception UI/UX, avec pour ambition de construire une carrière créative mêlant esthétique et stratégie de marque.</p><p class="mt-4 text-lg leading-[1.35]">À travers mes projets, j’ai développé des compétences en identité visuelle, design d’interfaces et intégration web. J’aime imaginer des univers graphiques marquants et concevoir des expériences fluides, fonctionnelles et engageantes.</p></div><img class="relative top-[-120px] mx-auto max-h-[700px] w-auto object-contain max-[640px]:top-[-20px] max-[640px]:max-h-[450px]" src="/images/avatar-dots.png" alt="Portrait de Matias en motif de points" width="800" height="800" /></section>
     <Skills />
-    <section class="education section"><h2>Parcours scolaire</h2><div class="education-list">{education.map(([degree, school, years]) => <div class="education-row"><h3>{degree}</h3><p><span>{school}</span><br />{years}</p></div>)}</div></section>
-    <section class="tools section" aria-labelledby="tools-title"><div class="tools-card"><h2 id="tools-title">Outils</h2><ul>{['Figma', 'Affinity', 'Canva', 'DaVinci Resolve', 'WordPress', 'HTML / CSS', 'Astro', 'SQL'].map(tool => <li>{tool}</li>)}</ul><div class="tool-colors" aria-hidden="true">{['#ff4961','#ff9415','#ffc400','#00c74d','#163cff','#888','#ddd'].map(color => <span style={`background:${color}`}></span>)}</div></div></section>
-    <section class="process section"><h2>Concevoir avec créativité</h2><div class="process-grid">{process.map(([title, description], i) => <article class={`process-card step-${i + 1}`}><span class="step-number">0{i + 1}.</span><h3>{title}</h3><p>{description}</p></article>)}</div></section>
+    <section class="my-[120px] mt-[170px] max-[640px]:my-[70px]"><h2 class="font-display text-[clamp(32px,4vw,58px)] font-medium uppercase">Parcours scolaire</h2><div class="mt-10 max-w-[850px]">{education.map(([degree, school, years]) => <div class="flex items-center justify-between gap-5 border-b border-[#555] py-5"><h3 class="font-display text-[35px] font-medium max-[640px]:text-2xl">{degree}</h3><p class="text-right font-display text-2xl max-[640px]:text-lg"><span class="text-electric">{school}</span><br />{years}</p></div>)}</div></section>
+    <section class="my-[120px] max-[640px]:my-[70px]" aria-labelledby="tools-title">
+      <div class="grid grid-cols-[330px_minmax(0,760px)] items-stretch gap-7 max-[640px]:grid-cols-1">
+        <div class="w-[330px] rounded-3xl bg-white p-[25px] shadow-[-16px_-12px_#0001] max-[640px]:w-full">
+          <h2 id="tools-title" class="font-display text-[32px] font-medium">Outils</h2>
+          <ul class="mt-[15px] list-none p-0 font-sans text-[23px] font-normal">
+            {tools.map((tool, i) => <li class="border-t border-[#ddd] p-1"><button type="button" class={`tool-button block w-full bg-transparent p-1 text-left transition hover:rounded-[7px] hover:bg-electric hover:text-white focus-visible:outline-2 focus-visible:outline-electric ${i === 0 ? 'rounded-[7px] !bg-electric !text-white' : ''}`} data-tool={tool.name}>{tool.name}</button></li>)}
+          </ul>
+          <div class="mt-3 flex gap-3 mx-2" aria-hidden="true">{['#ff4961','#ff9415','#ffc400','#00c74d','#163cff','#888','#ddd'].map(color => <span class="h-3.5 w-3.5 rounded-full" style={`background:${color}`}></span>)}</div>
+        </div>
+        <div class="min-h-[420px] rounded-[28px] bg-white px-[55px] pb-[35px] pt-[45px] shadow-[0_20px_55px_#0002] max-[640px]:min-h-0 max-[640px]:px-[22px] max-[640px]:pb-[25px] max-[640px]:pt-[30px]" aria-live="polite">
+          {tools.map((tool, i) => <article class="tool-detail" data-detail={tool.name} hidden={i !== 0}>
+            <p class="text-[13px] font-normal uppercase text-electric">{tool.category}</p>
+            <h2 class="mt-2 font-display text-[clamp(48px,6vw,68px)] font-normal leading-none">{tool.name}</h2>
+            <p class="mt-2 max-w-[650px] text-lg">{tool.description}</p>
+            <div class="mt-[30px] grid grid-cols-2 gap-[35px] max-[640px]:grid-cols-1 max-[640px]:gap-6">
+              <div><h3 class="mb-3 text-sm font-normal">Ce que je produis avec</h3><ul class="list-disc pl-[18px]">{tool.products.map((product) => <li class="mb-2 text-sm">{product}</li>)}</ul></div>
+              <div><h3 class="mb-3 text-sm font-normal">Champs d’intervention</h3><div class="flex flex-wrap gap-[5px]">{tool.fields.map((field) => <span class="rounded-[30px] bg-electric px-2 py-1 font-sans text-xs text-white">{field}</span>)}</div><p class="mt-6 flex justify-between gap-[15px] text-[13px]"><strong>Niveau d’usage</strong><span class="text-right text-electric">{tool.level}</span></p></div>
+            </div>
+          </article>)}
+        </div>
+      </div>
+    </section>
+    <section class="my-[120px] max-[640px]:my-[70px]"><h2 class="font-display text-[clamp(32px,4vw,58px)] font-medium uppercase">Concevoir avec créativité</h2><div class="mt-[35px] grid grid-cols-3 gap-[25px] max-[640px]:grid-cols-1">{process.map(([title, description], i) => <article class={`rounded-[28px] p-7 ${i === 0 ? 'bg-white' : i === 1 ? 'bg-folder' : i === 2 ? 'bg-electric text-white' : 'col-span-3 bg-[#333] text-white max-[640px]:col-span-1'}`}><span class="font-display text-[65px]">{`0${i + 1}.`}</span><h3 class="my-[5px] mb-3 font-display text-[26px]">{title}</h3><p class="text-base">{description}</p></article>)}</div></section>
   </div>
 </Layout>
+<script>
+  const buttons = [...document.querySelectorAll<HTMLButtonElement>('.tool-button')];
+  const details = [...document.querySelectorAll<HTMLElement>('.tool-detail')];
+
+  const selectTool = (toolName: string) => {
+    buttons.forEach((button) => {
+      const active = button.dataset.tool === toolName;
+      button.classList.toggle('!bg-electric', active);
+      button.classList.toggle('!text-white', active);
+      button.classList.toggle('rounded-[7px]', active);
+    });
+    details.forEach((detail) => { detail.hidden = detail.dataset.detail !== toolName; });
+  };
+
+  buttons.forEach((button) => {
+    button.addEventListener('mouseenter', () => selectTool(button.dataset.tool ?? ''));
+    button.addEventListener('focus', () => selectTool(button.dataset.tool ?? ''));
+    button.addEventListener('click', () => selectTool(button.dataset.tool ?? ''));
+  });
+</script>

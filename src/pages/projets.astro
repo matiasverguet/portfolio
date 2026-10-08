@@ -3,10 +3,10 @@ import Layout from '../layouts/Layout.astro';
 import ProjectGrid from '../components/ProjectGrid.astro';
 ---
 <Layout title="Mes projets — Matias Verguet--Bailly">
-  <section class="container projects-page page-section">
-    <h1 class="page-title">Mes projets</h1>
-    <div class="projects-intro"><p>Entre stratégie et création : je conçois des solutions visuelles pour répondre à des besoins réels avec un design percutant.</p>
-      <div class="filter-control"><label for="project-filter">Filtrer</label><select id="project-filter"><option value="all">Tous les projets</option><option>Web design</option><option>Graphisme</option><option>Identité de marque</option></select></div>
+  <section class="mx-auto w-[84%] max-w-[1220px] pb-[150px] pt-[65px] max-[640px]:w-[88%] max-[640px]:pb-[85px] max-[640px]:pt-10">
+    <h1 class="font-display text-[clamp(56px,10vw,150px)] font-normal uppercase leading-[1.12] tracking-[-.02em]">Mes projets</h1>
+    <div class="mt-[25px] flex items-center justify-between gap-[60px] max-[1000px]:gap-[25px] max-[640px]:block"><p class="max-w-[650px] text-[25px] max-[1000px]:text-xl max-[640px]:text-lg">Entre stratégie et création : je conçois des solutions visuelles pour répondre à des besoins réels avec un design percutant.</p>
+      <div class="flex items-center gap-5 rounded-full bg-electric px-5 py-3 text-white max-[1000px]:flex-col max-[1000px]:gap-1 max-[1000px]:rounded-[20px] max-[640px]:mt-[30px] max-[640px]:flex-row max-[640px]:justify-between"><label class="uppercase" for="project-filter">Filtrer</label><select class="max-w-[180px] border-0 bg-electric text-white" id="project-filter"><option value="all">Tous les projets</option><option>Web design</option><option>Graphisme</option><option>Identité de marque</option></select></div>
     </div>
     <ProjectGrid />
     <p class="filter-status sr-only" aria-live="polite"></p>

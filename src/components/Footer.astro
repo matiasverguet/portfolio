@@ -1,13 +1,13 @@
 ---
 import { profile } from '../data/portfolio';
 ---
-<footer class="site-footer">
-  <div class="footer-inner">
-    <div class="footer-contacts">
-      <div><span>Email :</span><a href={`mailto:${profile.email}`}>{profile.email}</a></div>
-      <div><span>Tél :</span><a href={`tel:${profile.phoneHref}`}>{profile.phone}</a></div>
-      <a class="footer-contact" href="/contact">Discutons d’un projet <span aria-hidden="true">↗</span></a>
+<footer class="bg-[#d8d8d8] px-0 pb-[35px] pt-[65px] max-[640px]:py-[25px]">
+  <div class="mx-auto w-[min(1220px,84%)]">
+    <div class="flex items-end gap-[100px] border-b border-[#555] pb-5 max-[1000px]:gap-10 max-[640px]:flex-col max-[640px]:items-start max-[640px]:gap-6">
+      <div><span class="mb-1 block font-display text-2xl uppercase max-[640px]:text-[21px]">Email :</span><a class="text-xl max-[1000px]:text-[17px]" href={`mailto:${profile.email}`}>{profile.email}</a></div>
+      <div><span class="mb-1 block font-display text-2xl uppercase max-[640px]:text-[21px]">Tél :</span><a class="text-xl max-[1000px]:text-[17px]" href={`tel:${profile.phoneHref}`}>{profile.phone}</a></div>
+      <a class="ml-auto max-[1000px]:text-sm max-[640px]:ml-0" href="/contact">Discutons d’un projet <span aria-hidden="true">↗</span></a>
     </div>
-    <p>© 2026 {profile.name}. Tous droits réservés.</p>
+    <p class="mt-[22px] text-[17px] max-[640px]:text-sm">© 2026 {profile.name}. Tous droits réservés.</p>
   </div>
 </footer>

@@ -1,0 +1,134 @@
+---
+import Layout from '../../layouts/Layout.astro';
+---
+<Layout title="La Cimade — Matias Verguet--Bailly" description="Étude de cas La Cimade : refonte d'identité visuelle, stratégie de marque, charte graphique et supports de communication.">
+  <div class="mx-auto w-[84%] max-w-[1220px] pb-[150px] pt-[65px] max-[640px]:w-[88%] max-[640px]:pb-[85px] max-[640px]:pt-10">
+
+    {/* En-tête / Hero */}
+    <section class="grid grid-cols-[1fr_.82fr] items-start gap-[8%] max-[800px]:grid-cols-1">
+      <div>
+        <h1 class="font-display text-[clamp(44px,6vw,82px)] uppercase leading-[.95]">LA CIMADE</h1>
+        <p class="mt-2 text-sm font-medium">Refonte d’identité visuelle &amp; Stratégie de marque — Projet étudiant</p>
+        <div class="mt-[42px] space-y-5 text-sm leading-[1.25]">
+          <div>
+            <h2 class="font-display text-xl uppercase">Contexte</h2>
+            <p>Association historique (1939) de défense des droits et accueil des personnes réfugiées et migrantes.</p>
+          </div>
+          <div>
+            <h2 class="font-display text-xl uppercase">Objectif</h2>
+            <p>Moderniser une identité vieillissante et clivante (rouge/noir) pour affirmer un rôle d’accueil chaleureux, protecteur et bâtisseur de justice solidaire.</p>
+          </div>
+          <div>
+            <h2 class="font-display text-xl uppercase">Mon rôle</h2>
+            <p>Audit visuel, benchmark associatif, repositionnement graphique, création du logotype et de la charte.</p>
+          </div>
+          <div>
+            <h2 class="font-display text-xl uppercase">Outils</h2>
+            <p>Canva · Affinity · ...</p>
+          </div>
+        </div>
+      </div>
+      <div class="pt-3">
+        <p class="text-right font-display text-[clamp(22px,3vw,38px)] uppercase">[GRAPHISME / BRANDING]</p>
+        <div class="mt-8 flex justify-center">
+          <img class="w-full max-w-[340px] object-contain drop-shadow-sm" src="/images/cimade-star-icon.png" alt="Monogramme étoile et C - La Cimade" width="340" height="340" />
+        </div>
+      </div>
+    </section>
+
+    {/* Section 1 : Audit & Problématique */}
+    <section class="mt-[75px]">
+      <div class="flex items-center gap-4">
+        <span class="font-display text-[60px] leading-none text-[#8ca1eb]">1</span>
+        <h2 class="text-lg font-bold">Audit &amp; Problématique</h2>
+      </div>
+      <div class="mt-4 flex items-center justify-between gap-8 max-[680px]:flex-col max-[680px]:items-start">
+        <div class="w-[310px] max-w-[310px] shrink-0 max-[680px]:w-full max-[680px]:max-w-[280px]">
+          <img class="w-full object-contain drop-shadow-sm" src="/images/cimade-old-logos.png" alt="Ancienne identité visuelle de La Cimade sur fond rouge et fond blanc" width="310" height="280" loading="lazy" />
+        </div>
+
+        <div class="space-y-4 text-sm leading-[1.35]">
+          <p>L’ancienne identité visuelle reposait sur des codes visuels clivants (rouge vif, noir) et une typographie datée. L’image perçue était austère et militante, alors que les missions réelles sont axées sur l’accueil, l’entraide et l’espoir.</p>
+          <p>Il était nécessaire de faire évoluer cette image vers un univers plus chaleureux et rassurant, tout en conservant l’impact militant historique, facilitant ainsi l’adhésion d’un public plus large (bénévoles, donateurs et personnes accueillies).</p>
+        </div>
+      </div>
+    </section>
+
+    {/* Section 2 : Recherches & Exploration du signe */}
+    <section class="mt-[70px]">
+      <div class="flex items-center gap-4">
+        <span class="font-display text-[60px] leading-none text-[#8ca1eb]">2</span>
+        <h2 class="text-lg font-bold">Recherches &amp; Exploration du signe</h2>
+      </div>
+      <p class="mt-3 text-xs leading-[1.4] text-[#333]">
+        L’inspiration s’est orientée vers la métaphore de l’étoile polaire et de l’étincelle, symbole de guide et d’espoir dans le parcours d’exil. Le travail typographique a été mené autour du monogramme « C », apportant une spontanéité humaine, rompant avec la froideur institutionnelle.
+      </p>
+      <div class="mt-6 grid grid-cols-2 items-center gap-[5%] max-[800px]:grid-cols-1">
+        <div class="flex items-center justify-center overflow-hidden rounded-[24px] bg-white p-4 shadow-sm border border-[#eee]">
+          <img class="w-full object-contain" src="/images/cimade-sketches.png" alt="Croquis et roughs de recherche pour le logo La Cimade" width="609" height="407" loading="lazy" />
+        </div>
+        <div class="flex items-center justify-center overflow-hidden rounded-[24px] bg-white p-4 shadow-sm border border-[#eee] max-[800px]:mt-5">
+          <img class="w-full object-contain" src="/images/cimade-star-explorations.png" alt="Explorations des formes et couleurs de l'étoile" width="609" height="407" loading="lazy" />
+        </div>
+      </div>
+    </section>
+
+    {/* Section 3 : Le Logotype & la Charte Graphique */}
+    <section class="mt-[70px]">
+      <div class="flex items-center gap-4">
+        <span class="font-display text-[60px] leading-none text-[#8ca1eb]">3</span>
+        <h2 class="text-lg font-bold">Le Logotype &amp; la Charte Graphique</h2>
+      </div>
+
+      {/* Cartes logotype principal (icône + version sombre) */}
+      <div class="mt-6 grid grid-cols-2 gap-6 max-[640px]:grid-cols-1">
+        <div class="flex min-h-[220px] items-center justify-center rounded-[24px] bg-white p-8 shadow-sm border border-[#eee]">
+          <img class="max-h-[170px] w-auto object-contain" src="/images/cimade-star-icon.png" alt="Icône étoile La Cimade" width="444" height="425" loading="lazy" />
+        </div>
+        <div class="flex min-h-[220px] items-center justify-center overflow-hidden rounded-[24px] shadow-sm">
+          <img class="h-full w-full object-cover" src="/images/cimade-logo-dark.png" alt="Logotype horizontal La Cimade sur fond sombre" width="518" height="412" loading="lazy" />
+        </div>
+      </div>
+
+      {/* Cartes Palette de Couleurs */}
+      <div class="mt-6 overflow-hidden rounded-[24px]">
+        <img class="w-full object-contain" src="/images/cimade-colors.png" alt="Palette de couleurs : Bleu #4363F0, Sombre #1A2238 et Blanc #FFFFFF avec valeurs RGB et CMJN" width="1024" height="348" loading="lazy" />
+      </div>
+
+      {/* Déclinaisons (Horizontal, Vertical, Icône) */}
+      <div class="mt-6 overflow-hidden rounded-[24px] bg-white p-6 shadow-sm border border-[#eee]">
+        <img class="w-full object-contain" src="/images/cimade-declinaisons.png" alt="Déclinaisons du logotype : Horizontal, Vertical, Icône" width="1024" height="357" loading="lazy" />
+      </div>
+
+      {/* Charte Typographique */}
+      <div class="mt-6 overflow-hidden rounded-[24px] bg-white p-6 shadow-sm border border-[#eee]">
+        <img class="w-full object-contain" src="/images/cimade-typography.png" alt="Typographies de la charte : Caveat pour les titres et Lilita One pour le corps de texte" width="1024" height="260" loading="lazy" />
+      </div>
+    </section>
+
+    {/* Section 4 : Déclinaisons & Supports de Communication */}
+    <section class="mt-[70px]">
+      <div class="flex items-center gap-4">
+        <span class="font-display text-[60px] leading-none text-[#8ca1eb]">4</span>
+        <h2 class="text-lg font-bold">Déclinaisons &amp; Supports de Communication</h2>
+      </div>
+      <p class="mt-4 max-w-[950px] text-sm leading-[1.35]">
+        Déclinaison du système visuel sur des supports digitaux (posts réseaux sociaux, bannières de sensibilisation) et print (dépliants d’accueil, affiches évènement), garantissant un impact immédiat sur le terrain.
+      </p>
+      <div class="mt-6">
+        <img class="w-full rounded-[24px] object-cover shadow-sm" src="/images/cimade-supports.png" alt="Déclinaisons de supports pour La Cimade : post Instagram, format mobile et dépliants imprimés" width="1024" height="408" loading="lazy" />
+      </div>
+    </section>
+
+    {/* Section 5 : Résultats & Compétences acquises */}
+    <section class="mt-[125px] max-w-[900px]">
+      <h2 class="text-lg font-bold">Résultats &amp; Compétences acquises</h2>
+      <ul class="mt-4 list-disc space-y-3 pl-5 text-sm leading-[1.35]">
+        <li><strong>Refonte globale d’une marque complexe :</strong> Clarification du positionnement et validation de la charte auprès de personnes cibles (bénévoles, grand public).</li>
+        <li><strong>Sensibilité typographique et symbolique :</strong> Création d’un symbole fort et porteur de sens, combinant chaleur humaine et revendication claire.</li>
+        <li><strong>Déclinaison multi-supports :</strong> Adaptation harmonieuse de l’identité aux différents formats (print institutionnel, réseaux sociaux, signalétique).</li>
+      </ul>
+    </section>
+
+  </div>
+</Layout>

@@ -2,4 +2,4 @@
 interface Props { class?: string }
 const { class: className = '' } = Astro.props;
 ---
-<div class={`folder ${className}`} aria-hidden="true"><div class="folder-back"></div><slot /><div class="folder-front"></div></div>
+<div class={`h-[130px] w-[180px] [filter:drop-shadow(-16px_-9px_1px_#00000018)] ${className}`} aria-hidden="true"><div class="absolute inset-[15%_0_0] rounded-xl bg-[#048fc6] before:absolute before:left-0 before:top-[-12%] before:h-[24%] before:w-2/5 before:rounded-[10px_13px_0_0] before:bg-[#048fc6] before:content-['']"></div><slot /><div class="absolute inset-[24%_0_0] rounded-xl bg-folder"></div></div>

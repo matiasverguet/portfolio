@@ -3,24 +3,24 @@ import Layout from '../layouts/Layout.astro';
 import { profile } from '../data/portfolio';
 ---
 <Layout title="Contact — Matias Verguet--Bailly">
-  <section class="container contact-page page-section">
-    <h1 class="page-title">Discutons d’un projet</h1>
-    <div class="contact-grid">
-      <section class="contact-card"><h2>Coordonnées</h2><dl>
-        <div><dt>Stage</dt><dd><span class="status-badge">29/03 au 04/06 2026</span></dd></div>
-        <div><dt>Email</dt><dd><a href={`mailto:${profile.email}`}>{profile.email}</a></dd></div>
-        <div><dt>Tél</dt><dd><a href={`tel:${profile.phoneHref}`}>{profile.phone}</a></dd></div>
-        <div><dt>Localisation</dt><dd>{profile.location}</dd></div>
-      </dl><p class="contact-note">Une idée, une collaboration ? Écris-moi pour en discuter.</p></section>
-      <section class="contact-card"><h2>Contactez-moi</h2>
+  <section class="mx-auto w-[84%] max-w-[1220px] pb-[150px] pt-[65px] max-[640px]:w-[88%] max-[640px]:pb-[85px] max-[640px]:pt-10">
+    <h1 class="font-display text-[clamp(44px,6.5vw,96px)] font-normal uppercase leading-[1.12] tracking-[-.02em]">Discutons d’un projet</h1>
+    <div class="mt-[60px] grid grid-cols-2 gap-[35px] max-[1000px]:gap-6 max-[640px]:mt-10 max-[640px]:grid-cols-1">
+      <section class="rounded-[24px] bg-white p-6 shadow-[-10px_-8px_25px_#0002] max-[1000px]:p-5"><h2 class="mb-5 font-display text-[clamp(30px,3.5vw,48px)] font-medium uppercase leading-[1.2]">Coordonnées</h2><dl>
+        <div class="border-b border-[#888] py-2.5"><dt class="font-display text-[22px] uppercase">Stage</dt><dd class="mt-[3px] font-display text-[20px] leading-[1.35]"><span class="inline-block rounded-[10px] bg-[#7cff6b] px-2.5 py-2 text-lg">29/03 au 04/06 2026</span></dd></div>
+        <div class="border-b border-[#888] py-2.5"><dt class="font-display text-[22px] uppercase">Email</dt><dd class="mt-[3px] font-display text-[20px] leading-[1.35]"><a href={`mailto:${profile.email}`}>{profile.email}</a></dd></div>
+        <div class="border-b border-[#888] py-2.5"><dt class="font-display text-[22px] uppercase">Tél</dt><dd class="mt-[3px] font-display text-[20px] leading-[1.35]"><a href={`tel:${profile.phoneHref}`}>{profile.phone}</a></dd></div>
+        <div class="border-b border-[#888] py-2.5"><dt class="font-display text-[22px] uppercase">Localisation</dt><dd class="mt-[3px] font-display text-[20px] leading-[1.35]">{profile.location}</dd></div>
+      </dl><p class="mt-6 text-lg">Une idée, une collaboration ? Écris-moi pour en discuter.</p></section>
+      <section class="rounded-[24px] bg-white p-6 shadow-[-10px_-8px_25px_#0002] max-[1000px]:p-5"><h2 class="mb-5 font-display text-[clamp(30px,3.5vw,48px)] font-medium uppercase leading-[1.2]">Contactez-moi</h2>
         <form id="contact-form">
-          <label for="name">Votre nom</label><input id="name" name="name" autocomplete="name" required maxlength="120" />
-          <label for="email">Votre email</label><input id="email" name="email" type="email" autocomplete="email" required maxlength="254" />
-          <fieldset class="subjects"><legend class="sr-only">Sujet du message</legend>{['Stage / Alternance', 'Identité visuelle', 'Autre'].map((topic,i) => <label><input type="radio" name="topic" value={topic} checked={i === 0} /><span>{topic}</span></label>)}</fieldset>
-          <label for="message">Votre message</label><textarea id="message" name="message" rows="4" required maxlength="5000"></textarea>
-          <button class="button" type="submit">Préparer le message <span aria-hidden="true">→</span></button>
-          <p class="form-note">Ce formulaire ouvre ta messagerie. Aucun message n’est envoyé depuis le site.</p>
-          <p id="form-status" role="status"></p>
+          <label class="mb-1 block font-display text-[22px] uppercase" for="name">Votre nom</label><input class="mb-4 w-full rounded-[10px] border border-[#080808] bg-[#fffcfc] p-2.5" id="name" name="name" autocomplete="name" required maxlength="120" />
+          <label class="mb-1 block font-display text-[22px] uppercase" for="email">Votre email</label><input class="mb-4 w-full rounded-[10px] border border-[#080808] bg-[#fffcfc] p-2.5" id="email" name="email" type="email" autocomplete="email" required maxlength="254" />
+          <fieldset class="mb-4 flex flex-wrap gap-1.5 border-0 p-0"><legend class="sr-only">Sujet du message</legend>{['Stage / Alternance', 'Identité visuelle', 'Autre'].map((topic,i) => <label class="relative cursor-pointer"><input class="absolute opacity-0" type="radio" name="topic" value={topic} checked={i === 0} /><span class="block rounded-[30px] border px-2 py-1.5 font-display text-base">{topic}</span></label>)}</fieldset>
+          <label class="mb-1 block font-display text-[22px] uppercase" for="message">Votre message</label><textarea class="mb-4 w-full resize-y rounded-[10px] border border-[#080808] bg-[#fffcfc] p-2.5" id="message" name="message" rows="4" required maxlength="5000"></textarea>
+          <button class="inline-flex w-full items-center justify-center gap-[18px] rounded-full bg-electric px-5 py-3 text-sm uppercase text-white" type="submit">Préparer le message <span class="text-xl" aria-hidden="true">→</span></button>
+          <p class="mt-[15px] text-[13px] text-[#555]">Ce formulaire ouvre ta messagerie. Aucun message n’est envoyé depuis le site.</p>
+          <p class="mt-2.5 text-sm" id="form-status" role="status"></p>
         </form>
       </section>
     </div>

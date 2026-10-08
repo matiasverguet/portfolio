@@ -1,12 +1,12 @@
 ---
 const path = Astro.url.pathname.replace(/\/$/, '') || '/';
 ---
-<header class="site-header">
-  <a class="logo" href="/" aria-label="Matias Verguet--Bailly — Accueil"><img src="/images/logo.svg" alt="MVB" width="68" height="40" /></a>
-  <nav aria-label="Navigation principale">
-    <a href="/projets" aria-current={path === '/projets' ? 'page' : undefined}>Projet</a>
-    <a href="/about" aria-current={path === '/about' ? 'page' : undefined}>About</a>
-    <a class="contact-link" href="/contact" aria-current={path === '/contact' ? 'page' : undefined}>Contact</a>
+<header class="sticky top-0 z-10 flex h-[64px] min-h-0 items-center justify-between border-b border-[#666] bg-[#e3e3e3] px-[3.6%] max-[640px]:h-[58px] max-[640px]:px-[6%]">
+  <a class="w-[52px] shrink-0 max-[640px]:w-[45px]" href="/" aria-label="Matias Verguet--Bailly — Accueil"><img class="h-[30px] w-full object-contain max-[640px]:h-[26px]" src="/images/logo.svg" alt="MVB" width="68" height="40" /></a>
+  <nav class="flex items-center gap-[65px] max-[1000px]:gap-[35px] max-[640px]:gap-[22px]" aria-label="Navigation principale">
+    <a class="text-[14px] uppercase hover:text-electric aria-[current=page]:underline aria-[current=page]:decoration-1 aria-[current=page]:underline-offset-4 max-[640px]:text-xs" href="/projets" aria-current={path === '/projets' ? 'page' : undefined}>Projet</a>
+    <a class="text-[14px] uppercase hover:text-electric aria-[current=page]:underline aria-[current=page]:decoration-1 aria-[current=page]:underline-offset-4 max-[640px]:text-xs" href="/about" aria-current={path === '/about' ? 'page' : undefined}>About</a>
+    <a class="rounded-[10px] bg-[#080808] px-3 py-1.5 text-[14px] uppercase text-white hover:text-electric aria-[current=page]:underline aria-[current=page]:decoration-1 aria-[current=page]:underline-offset-4 aria-[current=page]:bg-white aria-[current=page]:text-[#080808] aria-[current=page]:shadow-[0_2px_10px_#0004] max-[640px]:rounded-[8px] max-[640px]:px-2.5 max-[640px]:py-1 max-[640px]:text-xs" href="/contact" aria-current={path === '/contact' ? 'page' : undefined}>Contact</a>
   </nav>
-  <a class="edition" href="/">Portfolio-2026</a>
+  <a class="text-[14px] uppercase text-electric max-[640px]:hidden" href="/">Portfolio-2026</a>
 </header>
