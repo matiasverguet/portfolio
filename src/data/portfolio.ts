@@ -10,7 +10,7 @@ export const profile = {
 
 export const projects = [
   { title: 'Chorus Symphonia', category: 'Web design', image: '/images/chorus.webp', hoverImage: '/images/chorus-hover.png', href: '/projets/chorus-symphonia', number: '01', cardTitle: 'Identité visuelle & maquettage', tags: ['Branding', 'UI', '2025'] },
-  { title: 'Affiche Montbéliard', category: 'Graphisme', image: '/images/montbeliard.webp', hoverImage: '/images/montbeliard-hover.png', number: '02', cardTitle: 'Design d’affiche', tags: ['Affiche', 'Édition', '2025'] },
+  { title: 'Affiche Montbéliard', category: 'Graphisme', image: '/images/montbeliard.webp', hoverImage: '/images/montbeliard-hover.png', href: '/projets/affiches-montbeliard', number: '02', cardTitle: 'Design d’affiche', tags: ['Affiche', 'Édition', '2025'] },
   { title: 'La Cimade', category: 'Identité de marque', image: '/images/cimade.webp', hoverImage: '/images/cimade-hover.png', href: '/projets/la-cimade', number: '03', cardTitle: 'Identité visuelle', tags: ['Branding', 'Print', '2025'] },
 ];
 
